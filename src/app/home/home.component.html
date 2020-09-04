@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row bg-warning sticky-top" style="height: 65px">
+        <div class="col d-flex align-items-center">
+            <!-- <fa-icon
+    [icon]="faAirFreshener"
+    style="font-size: 28px; margin-right: 8px"
+  ></fa-icon> -->
+            My Folio
+        </div>
+        <div class="col d-flex justify-content-end align-items-center">
+            <a class="btn btn-outline-light mr-1" routerLink="/home/help">Help</a>
+
+            <a class="btn btn-outline-light mr-1" routerLink="/home/contact-us">
+    Contact Us
+  </a>
+
+            <button class="btn btn-outline-light mr-1" (click)="processLogout()">
+    Log Out
+  </button>
+        </div>
+    </div>
+
+    <div class="row bg-info mt-1 mb-2" style="height: 500px;">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <div style="font-size: 45px; font-weight: bold; font-family: Times New Roman;">My PortFolio</div>
+            <div style="font-style: italic; font-size: 25px; justify-content: center; align-items: center;">
+                Create your resume for you and share with world....!</div>
+
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col-12">
+            <button type="button" class="btn btn-primary btn-lg btn-block" value="personal" (click)="personal()">Personal Details</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" value="education" (click)="education()">Educational Details</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" value="w-experiance" (click)="experience()">Work experience</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block">Reference</button>
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
+</div>

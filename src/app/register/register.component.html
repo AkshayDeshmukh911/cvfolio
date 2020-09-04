@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row" style="height: 100vh">
+        <div class="col bg-warning d-flex flex-column justify-content-center align-items-center" style="background: url('pic1.jpg');">
+            <div class="h3">Welcome to my Application</div>
+            <div class="h6">
+                Create world Digital Create digital folio!
+            </div>
+        </div>
+        <div class="col bg-light d-flex flex-column justify-content-center align-items-center" [formGroup]="fbFormGroup">
+            <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                A simple danger alert-check it out !
+            </div>
+            <div style="border: 2px solid; box-shadow: 5px 10px 8px #888888; padding: 30px;">
+                <div class="h4">Application Sign-up</div>
+                <div>
+                    <input type="text" placeholder="Enter Username" class="form-control" formControlName="uername" />
+                </div>
+                <div class="mt-1">
+                    <input type="email" placeholder="Enter email" class="form-control" formControlName="email">
+                </div>
+                <div class="mt-1">
+                    <input type="password" placeholder="Enter password" class="form-control" formControlName="password" />
+                </div>
+                <div class="mt-1">
+                    <input type="text" placeholder="enter Number" class="form-control" formControlName="mobile" />
+                </div>
+
+                <button class="btn btn-lm btn-warning btn-block mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="registerHere()">Register Here</button>
+                <div><a routerLink=" /login/ ">Login Here</a></div>
+            </div>
+        </div>
+    </div>
+</div>
